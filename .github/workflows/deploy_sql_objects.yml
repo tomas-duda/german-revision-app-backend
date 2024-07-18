@@ -30,17 +30,17 @@ jobs:
       - name: Download Liquibase
         run: |
           wget https://github.com/liquibase/liquibase/releases/download/v4.28.0/liquibase-4.28.0.tar.gz -O liquibase.tar.gz
-          tar -xzf liquibase.tar.gz -C $HOME
+          mkdir $HOME/liquibase
+          tar -xzf liquibase.tar.gz -C $HOME/liquibase
           echo $HOME
-          ls -la $HOME
-          echo $LIQUIBASE_HOME
+          ls -la $HOME/liquibase
         env:
           LIQUIBASE_HOME: ${{ github.workspace }}/liquibase
 
       - name: Set up Liquibase
         run: |
           mkdir -p $LIQUIBASE_HOME
-          mv liquibase/* $LIQUIBASE_HOME
+          mv $HOME/liquibase/* $LIQUIBASE_HOME
         env:
           LIQUIBASE_HOME: ${{ github.workspace }}/liquibase
 
