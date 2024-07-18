@@ -1,0 +1,55 @@
+name: Deploy Database Changes
+
+on:
+  push:
+    paths:
+      - 'data/**'
+    branches:
+      - main
+  pull_request:
+    paths:
+      - 'data/**'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+
+      - name: Download Liquibase
+        run: |
+          curl -s https://download.liquibase.org/liquibase-4.28.0.tar.gz -o liquibase.tar.gz
+          tar -xzf liquibase.tar.gz -C $HOME
+        env:
+          LIQUIBASE_HOME: ${{ github.workspace }}/liquibase
+
+      - name: Set up Liquibase
+        run: |
+          mkdir -p $LIQUIBASE_HOME
+          mv liquibase/* $LIQUIBASE_HOME
+        env:
+          LIQUIBASE_HOME: ${{ github.workspace }}/liquibase
+
+      - name: Run Liquibase Update
+        run: |
+          $LIQUIBASE_HOME/liquibase \
+            --url="$DB_URL" \
+            --username="$DB_USERNAME" \
+            --password="$DB_PASSWORD" \
+            --changeLogFile=liquibase.properties \
+            update
+        env:
+          DB_URL: ${{ secrets.DB_URL }}
+          DB_USERNAME: ${{ secrets.DB_USERNAME }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          LIQUIBASE_HOME: ${{ github.workspace }}/liquibase
