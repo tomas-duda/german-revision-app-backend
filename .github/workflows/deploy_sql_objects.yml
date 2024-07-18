@@ -30,7 +30,7 @@ jobs:
       - name: Download Liquibase
         run: |
           wget https://github.com/liquibase/liquibase/releases/download/v4.28.0/liquibase-4.28.0.tar.gz -O liquibase.tar.gz
-          tar -xzf liquibase.tar.gz -C $HOME
+          tar -xzf liquibase.tar.gz -C $HOME/liquibase
         env:
           LIQUIBASE_HOME: ${{ github.workspace }}/liquibase
 
