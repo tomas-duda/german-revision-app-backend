@@ -1,35 +1,458 @@
-{
-  "databaseChangeLog": [
-    {
-      "changeSet": {
-        "id": "1",
-        "author": "Tomas Duda",
-        "changes": [
-          {
-            "createTable": {
-              "tableName": "example_table",
-              "columns": [
-                {
-                  "column": {
-                    "name": "id",
-                    "type": "int",
-                    "autoIncrement": true,
-                    "constraints": {
-                      "primaryKey": true
-                    }
-                  }
-                },
-                {
-                  "column": {
-                    "name": "name",
-                    "type": "varchar(255)"
-                  }
+{ "databaseChangeLog": [
+  {
+    "changeSet": {
+      "id": "1721302194856-1",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true,
+                    "primaryKeyName": "PK__deck__3213E83FB6F5EC44"
+                  },
+                  "name": "id",
+                  "type": "int"
                 }
-              ]
-            }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "user_id",
+                  "type": "int"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "defaultValueComputed": "getdate()",
+                  "defaultValueConstraintName": "DF__deck__revision_d__797309D9",
+                  "name": "revision_date",
+                  "type": "datetime"
+                }
+              }
+            ]
+            ,
+            "tableName": "deck"
           }
-        ]
-      }
+        }
+      ]
+      
     }
-  ]
-}
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-2",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true,
+                    "primaryKeyName": "PK__user__3213E83F44F29250"
+                  },
+                  "name": "id",
+                  "type": "int"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "email",
+                  "type": "nvarchar(255)"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValueComputed": "getdate()",
+                  "defaultValueConstraintName": "DF__user__created_da__5DCAEF64",
+                  "name": "created_date",
+                  "type": "datetime"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "account_status",
+                  "type": "nvarchar(50)"
+                }
+              }
+            ]
+            ,
+            "tableName": "user"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-3",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true,
+                    "primaryKeyName": "PK__word_rev__3213E83FC70F7C67"
+                  },
+                  "name": "id",
+                  "type": "int"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "word_id",
+                  "type": "int"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "deck_id",
+                  "type": "int"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "user_answer",
+                  "type": "nvarchar(255)"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "is_correct",
+                  "type": "bit"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "defaultValueConstraintName": "DF__word_revi__attem__76969D2E",
+                  "defaultValueNumeric": 1,
+                  "name": "attempts",
+                  "type": "int"
+                }
+              }
+            ]
+            ,
+            "tableName": "word_revision"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-4",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true,
+                    "primaryKeyName": "PK__translat__3213E83FBC7D127E"
+                  },
+                  "name": "id",
+                  "type": "int"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "word_id",
+                  "type": "int"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "translation_word_id",
+                  "type": "int"
+                }
+              }
+            ]
+            ,
+            "tableName": "translation"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-5",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "createTable": {
+            "columns": [
+              {
+                "column": {
+                  "autoIncrement": true,
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false,
+                    "primaryKey": true,
+                    "primaryKeyName": "PK__word__3213E83F77D7436C"
+                  },
+                  "name": "id",
+                  "type": "int"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "language",
+                  "type": "nvarchar(50)"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "constraints": {
+                    "nullable": false
+                  },
+                  "name": "word",
+                  "type": "nvarchar(255)"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "name": "gender",
+                  "type": "nvarchar(10)"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "name": "plural_form",
+                  "type": "nvarchar(255)"
+                }
+              },
+              {
+                "column": {
+                  "computed": false,
+                  "name": "genitiv_form",
+                  "type": "nvarchar(255)"
+                }
+              }
+            ]
+            ,
+            "tableName": "word"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-6",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "addUniqueConstraint": {
+            "columnNames": "email",
+            "constraintName": "UQ__user__AB6E6164E86BE803",
+            "tableName": "user"
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-7",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "deck_id",
+            "baseTableName": "word_revision",
+            "constraintName": "FK__word_revi__deck___787EE5A0",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "referencedColumnNames": "id",
+            "referencedTableName": "deck",
+            "validate": true
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-8",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "user_id",
+            "baseTableName": "deck",
+            "constraintName": "FK__deck__user_id__72C60C4A",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "referencedColumnNames": "id",
+            "referencedTableName": "user",
+            "validate": true
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-9",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "word_id",
+            "baseTableName": "word_revision",
+            "constraintName": "FK__word_revi__word___778AC167",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "referencedColumnNames": "id",
+            "referencedTableName": "word",
+            "validate": true
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-10",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "translation_word_id",
+            "baseTableName": "translation",
+            "constraintName": "FK__translati__trans__6383C8BA",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "referencedColumnNames": "id",
+            "referencedTableName": "word",
+            "validate": true
+          }
+        }
+      ]
+      
+    }
+  },
+  
+  {
+    "changeSet": {
+      "id": "1721302194856-11",
+      "author": "tduda (generated)",
+      "changes": [
+        {
+          "addForeignKeyConstraint": {
+            "baseColumnNames": "word_id",
+            "baseTableName": "translation",
+            "constraintName": "FK__translati__word___628FA481",
+            "deferrable": false,
+            "initiallyDeferred": false,
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "referencedColumnNames": "id",
+            "referencedTableName": "word",
+            "validate": true
+          }
+        }
+      ]
+      
+    }
+  }
+  
+]}
