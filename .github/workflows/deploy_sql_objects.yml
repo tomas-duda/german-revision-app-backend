@@ -47,10 +47,11 @@ jobs:
       - name: Run Liquibase Update
         run: |
           $LIQUIBASE_HOME/liquibase \
+            --defaultsFile=data/liquibase.properties \
             --url="$DB_URL" \
             --username="$DB_USERNAME" \
             --password="$DB_PASSWORD" \
-            --changeLogFile=data/liquibase.properties \
+            --changeLogFile=data/db/changelog/db.changelog-master.json \
             update
         env:
           DB_URL: ${{ secrets.DB_URL }}
