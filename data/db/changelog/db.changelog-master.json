@@ -2,7 +2,7 @@
   "databaseChangeLog": [
     {
       "include": {
-        "file": "db/changelog/changeset-001.json"
+        "file": "data/db/changelog/changeset-001.json"
       }
     }
   ]
