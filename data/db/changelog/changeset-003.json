@@ -1,0 +1,82 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "11",
+        "author": "yourname",
+        "changes": [
+          {
+            "modifyDataType": {
+              "columnName": "id",
+              "newDataType": "BIGINT",
+              "tableName": "translation"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "word_id",
+              "newDataType": "BIGINT",
+              "tableName": "translation"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "translation_word_id",
+              "newDataType": "BIGINT",
+              "tableName": "translation"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "id",
+              "newDataType": "BIGINT",
+              "tableName": "word"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "id",
+              "newDataType": "BIGINT",
+              "tableName": "user"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "id",
+              "newDataType": "BIGINT",
+              "tableName": "deck"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "user_id",
+              "newDataType": "BIGINT",
+              "tableName": "deck"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "id",
+              "newDataType": "BIGINT",
+              "tableName": "word_revision"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "word_id",
+              "newDataType": "BIGINT",
+              "tableName": "word_revision"
+            }
+          },
+          {
+            "modifyDataType": {
+              "columnName": "deck_id",
+              "newDataType": "BIGINT",
+              "tableName": "word_revision"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
