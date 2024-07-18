@@ -17,7 +17,7 @@
                     "primaryKeyName": "PK__deck__3213E83FB6F5EC44"
                   },
                   "name": "id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {
@@ -27,7 +27,7 @@
                     "nullable": false
                   },
                   "name": "user_id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {
@@ -67,7 +67,7 @@
                     "primaryKeyName": "PK__user__3213E83F44F29250"
                   },
                   "name": "id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {
@@ -130,7 +130,7 @@
                     "primaryKeyName": "PK__word_rev__3213E83FC70F7C67"
                   },
                   "name": "id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {
@@ -140,7 +140,7 @@
                     "nullable": false
                   },
                   "name": "word_id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {
@@ -150,7 +150,7 @@
                     "nullable": false
                   },
                   "name": "deck_id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {
@@ -213,7 +213,7 @@
                     "primaryKeyName": "PK__translat__3213E83FBC7D127E"
                   },
                   "name": "id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {
@@ -223,7 +223,7 @@
                     "nullable": false
                   },
                   "name": "word_id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {
@@ -233,7 +233,7 @@
                     "nullable": false
                   },
                   "name": "translation_word_id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               }
             ]
@@ -264,7 +264,7 @@
                     "primaryKeyName": "PK__word__3213E83F77D7436C"
                   },
                   "name": "id",
-                  "type": "int"
+                  "type": "bigint"
                 }
               },
               {

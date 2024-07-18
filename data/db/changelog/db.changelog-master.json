@@ -9,11 +9,6 @@
       "include": {
         "file": "data/db/changelog/changeset-002.json"
       }
-    },
-    {
-      "include": {
-        "file": "data/db/changelog/changeset-003.json"
-      }
     }
   ]
 }
