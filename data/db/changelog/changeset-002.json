@@ -1,0 +1,478 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "6",
+        "author": "tduda",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "user",
+              "columns": [
+                {
+                  "column": {
+                    "name": "email",
+                    "value": "user1@example.com"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "created_date",
+                    "valueDate": "2023-01-01T00:00:00"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "account_status",
+                    "value": "active"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "user",
+              "columns": [
+                {
+                  "column": {
+                    "name": "email",
+                    "value": "user2@example.com"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "created_date",
+                    "valueDate": "2023-01-02T00:00:00"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "account_status",
+                    "value": "active"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "changeSet": {
+        "id": "7",
+        "author": "tduda",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "word",
+              "columns": [
+                {
+                  "column": {
+                    "name": "language",
+                    "value": "Czech"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "word",
+                    "value": "dům"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "gender",
+                    "value": "m"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "plural_form",
+                    "value": "domy"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "genitiv_form",
+                    "value": "domů"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "word",
+              "columns": [
+                {
+                  "column": {
+                    "name": "language",
+                    "value": "German"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "word",
+                    "value": "Haus"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "gender",
+                    "value": "n"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "plural_form",
+                    "value": "Häuser"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "genitiv_form",
+                    "value": "Hauses"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "word",
+              "columns": [
+                {
+                  "column": {
+                    "name": "language",
+                    "value": "Czech"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "word",
+                    "value": "pes"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "gender",
+                    "value": "m"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "plural_form",
+                    "value": "psi"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "genitiv_form",
+                    "value": "psa"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "word",
+              "columns": [
+                {
+                  "column": {
+                    "name": "language",
+                    "value": "German"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "word",
+                    "value": "Hund"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "gender",
+                    "value": "m"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "plural_form",
+                    "value": "Hunde"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "genitiv_form",
+                    "value": "Hundes"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "changeSet": {
+        "id": "8",
+        "author": "tduda",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "translation",
+              "columns": [
+                {
+                  "column": {
+                    "name": "word_id",
+                    "valueNumeric": 1
+                  }
+                },
+                {
+                  "column": {
+                    "name": "translation_word_id",
+                    "valueNumeric": 2
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "translation",
+              "columns": [
+                {
+                  "column": {
+                    "name": "word_id",
+                    "valueNumeric": 3
+                  }
+                },
+                {
+                  "column": {
+                    "name": "translation_word_id",
+                    "valueNumeric": 4
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "changeSet": {
+        "id": "9",
+        "author": "tduda",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "deck",
+              "columns": [
+                {
+                  "column": {
+                    "name": "user_id",
+                    "valueNumeric": 1
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "deck",
+              "columns": [
+                {
+                  "column": {
+                    "name": "user_id",
+                    "valueNumeric": 2
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "changeSet": {
+        "id": "10",
+        "author": "tduda",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "word_revision",
+              "columns": [
+                {
+                  "column": {
+                    "name": "word_id",
+                    "valueNumeric": 1
+                  }
+                },
+                {
+                  "column": {
+                    "name": "deck_id",
+                    "valueNumeric": 1
+                  }
+                },
+                {
+                  "column": {
+                    "name": "revision_date",
+                    "valueDate": "2023-07-01T10:00:00"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "user_answer",
+                    "value": "Haus"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "is_correct",
+                    "valueBoolean": true
+                  }
+                },
+                {
+                  "column": {
+                    "name": "attempts",
+                    "valueNumeric": 1
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "word_revision",
+              "columns": [
+                {
+                  "column": {
+                    "name": "word_id",
+                    "valueNumeric": 3
+                  }
+                },
+                {
+                  "column": {
+                    "name": "deck_id",
+                    "valueNumeric": 1
+                  }
+                },
+                {
+                  "column": {
+                    "name": "revision_date",
+                    "valueDate": "2023-07-01T10:05:00"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "user_answer",
+                    "value": "Hund"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "is_correct",
+                    "valueBoolean": true
+                  }
+                },
+                {
+                  "column": {
+                    "name": "attempts",
+                    "valueNumeric": 1
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "word_revision",
+              "columns": [
+                {
+                  "column": {
+                    "name": "word_id",
+                    "valueNumeric": 1
+                  }
+                },
+                {
+                  "column": {
+                    "name": "deck_id",
+                    "valueNumeric": 2
+                  }
+                },
+                {
+                  "column": {
+                    "name": "revision_date",
+                    "valueDate": "2023-07-02T10:00:00"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "user_answer",
+                    "value": "Haus"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "is_correct",
+                    "valueBoolean": false
+                  }
+                },
+                {
+                  "column": {
+                    "name": "attempts",
+                    "valueNumeric": 2
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "word_revision",
+              "columns": [
+                {
+                  "column": {
+                    "name": "word_id",
+                    "valueNumeric": 3
+                  }
+                },
+                {
+                  "column": {
+                    "name": "deck_id",
+                    "valueNumeric": 2
+                  }
+                },
+                {
+                  "column": {
+                    "name": "revision_date",
+                    "valueDate": "2023-07-02T10:05:00"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "user_answer",
+                    "value": "Hund"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "is_correct",
+                    "valueBoolean": true
+                  }
+                },
+                {
+                  "column": {
+                    "name": "attempts",
+                    "valueNumeric": 1
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
