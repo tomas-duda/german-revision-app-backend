@@ -50,7 +50,7 @@ jobs:
             --url="$DB_URL" \
             --username="$DB_USERNAME" \
             --password="$DB_PASSWORD" \
-            --changeLogFile=liquibase.properties \
+            --changeLogFile=data/liquibase.properties \
             update
         env:
           DB_URL: ${{ secrets.DB_URL }}
